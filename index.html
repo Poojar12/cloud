@@ -1,12 +1,47 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>CLOUD COMPUTING</h1>
-    <p>rvce</p>
-</body>
+<html>
+	<head>
+ 		 <title>Login page</title>
+	</head>
+	<body>
+
+		<h1>Simple Login Page</h1>
+
+		<form> 
+			<fieldset><legend>LOGIN</legend>
+			 <label>Username</label>
+			 <input type="text" name="userid" id="userid"/><br><br>
+ 			 <label>Password</label>
+			  <input type="password" name="pswrd"/><br><br>
+ 			<input type="button" onclick="check(this.form)" value="Login"/>
+			 <input type="reset" value="Reset"/>
+			</fieldset>
+		</form>
+		
+	 <script language="javascript">
+		var ck_username = /^[1A-ZA-Z0-90-9A-ZA-ZA-Z0-9]{10}$/;
+		
+ 		var ck_pwd = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    
+
+ 		function check(form)
+ 			{
+				 var userid = form.userid.value;
+				 var pwd=form.pswrd.value;
+				 if (!ck_username.test(userid) || !ck_pwd.test(pwd)) 
+					{
+						alert("Incorrect User id/ pwd");
+ 					}
+ 				
+   				else
+  					{
+    				alert("Welcome to RVCE");
+					document.write(Date()+"   " +"Welcome"+userid);
+					document.body.bgColor="blue";
+						
+    					}
+  			 }
+			
+		
+   	</script>
+   	</body>
 </html>
